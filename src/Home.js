@@ -5,7 +5,8 @@ import data from './data';
 const Home = () => {
     return (
         <>
-            <h1 className="text-center mt-3">All Items</h1>
+            <h1 className="text-center mt-3">PopFigShop</h1>
+            <h2 className="text-center mt-3">Pop à la Une</h2>
                 <section className="py-4 container">
                     <div className="row justify-content-center">
                     {data.productData.map((item, index)=>{
