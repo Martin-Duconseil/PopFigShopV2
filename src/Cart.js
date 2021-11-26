@@ -18,7 +18,7 @@ const Cart = () => {
             <div className="row justify-content-center">
                 <div className="col-12">
                     <h1>Panier</h1>
-                    <h5>Nombre d'article : ({totalItems})</h5>
+                    <h5>Nombre d'article : {totalItems}</h5>
                     <table className="table table-light table-hover m-0">
                         <tbody>
                             {items.map((item, index) =>{
@@ -28,8 +28,8 @@ const Cart = () => {
                                             <img src={item.img} style={{height: '6rem'}} />
                                         </td>
                                         <td>{item.title}</td>
-                                        <td>{item.price}</td>
-                                        <td>Quantité ({item.quantity})</td>
+                                        <td>{item.price} €</td>
+                                        <td>Quantité x {item.quantity}</td>
                                         <td>
                                             <button 
                                                 className="btn btn-info ms-2"
