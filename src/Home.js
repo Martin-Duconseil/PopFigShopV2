@@ -9,8 +9,10 @@ const Home = () => {
     return ( // Ici on affiche le titre du site et de la première partie puis les cartes d'article
         <>
             <h1 className="text-center mt-3">PopFigShop</h1>
+            <br></br>
             <h2 className="text-center mt-3">Pop à la Une</h2>
-                <section className="py-4 container">
+            <br></br>
+                {/* <section className="py-4 container">
                     <div className="row justify-content-center">
                     {data.productData.map((item, index)=>{
                         return (
@@ -26,7 +28,7 @@ const Home = () => {
                     })}
 
                     </div>
-                </section>
+                </section> */}
         </>
     )
 }
