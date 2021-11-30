@@ -1,3 +1,6 @@
+// Le fichier Itemcard.js nous permet de mettre en forme les articles 
+// Pour cela on récupère les variables que l'on stock dans data.js
+
 import React from 'react';
 import { useCart } from 'react-use-cart';
 

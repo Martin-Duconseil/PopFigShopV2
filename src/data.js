@@ -1,5 +1,15 @@
+// Le fichier data.js est notre base de données
+
+// Les Articles sont définis par :
+//  - Un identifiant unique
+//  - Une image (source en url)
+//  - Un titre
+//  - Une description
+//  - Un prix
+
 const data = {
     productData:[
+//Ici on définit les différents articles ici ce sont des figurines POP
         {
             id: 1,
             img: "https://www.placedespop.com/img/produits/1404/thumbs/harry-potter-08-harry-potter-quidditch-1-1547215882_0x460.jpg",

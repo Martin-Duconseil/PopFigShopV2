@@ -1,5 +1,12 @@
+// Le fichier Cart.js est notre panier d'achat
+
 import React from 'react';
 import { useCart } from 'react-use-cart';
+
+// On importe et on utilise 'react-use-cart' pour avoir un panier fonctionnel
+
+// On définit le panier avec plusieurs paramètres
+// Ils nous permettent d'ajouter des articles, de les retirer etc...
 
 const Cart = () => {
    const { 
@@ -12,11 +19,11 @@ const Cart = () => {
        removeItem,
        emptyCart, 
     } = useCart();
-    if (isEmpty) return <h1 className="text-center">Votre panier est vide.</h1>    
+    if (isEmpty) return <h1 className="text-center">Votre panier est vide.</h1> // Message affiché si le panier est vide
     return (
         <section className="py-4 container">
             <div className="row justify-content-center">
-                <div className="col-12">
+                <div className="col-12"> 
                     <h1>Panier</h1>
                     <h5>Nombre d'article : {totalItems}</h5>
                     <table className="table table-light table-hover m-0">
