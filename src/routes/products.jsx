@@ -1,5 +1,5 @@
 import { CartProvider } from 'react-use-cart';
-import Search from '../Search';
+import Search from '../components/Search';
 
 export default function Products() {
     return (

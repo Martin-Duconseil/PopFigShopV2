@@ -1,5 +1,5 @@
 import React, { useState }  from 'react';
-import data from './data';
+import data from '../data/data';
 import Itemcard from './Itemcard'
 
 

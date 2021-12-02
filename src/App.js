@@ -2,12 +2,12 @@
 // On importe les différents éléments dont on a besoin
 
 import React from 'react';
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import HeaderBar from './HeaderBar';
+import './App.css'
+import HeaderBar from './components/HeaderBar';
 
 // On appelle les différents fichiers ici
-
 export default function App() {
   return (
       <div>

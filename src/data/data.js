@@ -8,6 +8,7 @@
 //  - Un prix
 
 const data = {
+
     productData:[
 //Ici on définit les différents articles ici ce sont des figurines POP
         {

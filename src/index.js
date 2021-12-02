@@ -8,24 +8,23 @@ import {
 
 import ReactDOM from 'react-dom';
 
-import './index.css';
-
 import reportWebVitals from './reportWebVitals';
 
 import App from './App';
 import Products from "./routes/products";
 import CartPage from './routes/cart';
 import Home from './routes/home';
-
+import Product from './routes/product';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} >
+          <Route index element={<Home />} />
           <Route path="products" element={<Products />} />
+          <Route path="product/:productId" element={<Product />} />
           <Route path="cart" element={<CartPage />} />
-          <Route path="home" element={<Home />} />
         </Route>
       </Routes>
     </BrowserRouter>,

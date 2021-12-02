@@ -1,6 +1,3 @@
-import { CartProvider } from 'react-use-cart';
-import Search from '../Search';
-
 export default function Products() {
     return (
         <div>

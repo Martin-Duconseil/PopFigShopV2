@@ -1,5 +1,5 @@
 import { CartProvider } from 'react-use-cart';
-import Cart from '../Cart';
+import Cart from '../components/Cart';
 
 export default function CartPage() {
     return (

@@ -11,7 +11,6 @@ import { useCart } from 'react-use-cart';
 const Cart = () => {
    const { 
        isEmpty,
-       totalUniqueItems,
        items,
        totalItems,
        cartTotal,
@@ -32,7 +31,7 @@ const Cart = () => {
                                 return(
                                     <tr key={index}>
                                         <td>
-                                            <img src={item.img} style={{height: '6rem'}} />
+                                            <img alt="" src={item.img} style={{height: '6rem'}} />
                                         </td>
                                         <td>{item.title}</td>
                                         <td>{item.price} €</td>
