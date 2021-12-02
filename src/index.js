@@ -15,7 +15,7 @@ import reportWebVitals from './reportWebVitals';
 import App from './App';
 import Products from "./routes/products";
 import CartPage from './routes/cart';
-
+import Home from './routes/home';
 
 
 ReactDOM.render(
@@ -25,6 +25,7 @@ ReactDOM.render(
         <Route path="/" element={<App />} >
           <Route path="products" element={<Products />} />
           <Route path="cart" element={<CartPage />} />
+          <Route path="home" element={<Home />} />
         </Route>
       </Routes>
     </BrowserRouter>,
