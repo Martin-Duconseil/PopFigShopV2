@@ -21,7 +21,7 @@ export default function Product() {
 
     function isExclusive() {
         if (pageProduct.exclusivity !== "") {
-            return <p>Exclusif : {pageProduct.exclusivity}</p>;
+            return <li>Exclusif : {pageProduct.exclusivity}</li>;
         } else {
             return null;
         }
