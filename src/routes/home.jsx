@@ -11,13 +11,48 @@ export default function Products() {
 
     return (
         <div>
-            <h2>Page d'accueil</h2>
+            <h2 className="text-center mt-3">Bienvenue sur PopFigShop</h2>
+            <p className="text-center mt-3">Le site de référence pour se renseigner et acheter des figurines pop</p>
             <br/>
-            <h2 className="text-center mt-3">Pop à la Une</h2>
-            <br/>
-            
             <div>
+                <h3 className="text-center mt-3">Harry Potter</h3><br/>
                 {data.productData.filter(item => item.licence.includes('Harry Potter')).map(filtered => (
+                        <CartProvider>
+                            <Itemcard 
+                                img={filtered.img}
+                                title={filtered.title}
+                                price={filtered.price}
+                                id={filtered.id}
+                                slug={filtered.slug}
+                                item={filtered} 
+                            />
+                        </CartProvider>
+                        
+                ))}
+            </div>
+
+                    <br/>
+
+            <div>
+                <h3 className="text-center mt-3">Le Seigneur des Anneaux</h3><br/>
+                {data.productData.filter(item => item.licence.includes('Le Seigneur des Anneaux')).map(filtered => (
+                        <CartProvider>
+                            <Itemcard 
+                                img={filtered.img}
+                                title={filtered.title}
+                                price={filtered.price}
+                                id={filtered.id}
+                                slug={filtered.slug}
+                                item={filtered} 
+                            />
+                        </CartProvider>
+                        
+                ))}
+            </div>
+
+            <div>
+                <h3 className="text-center mt-3">Naruto</h3>
+                {data.productData.filter(item => item.licence.includes('Naruto')).map(filtered => (
                         <CartProvider>
                             <Itemcard 
                                 img={filtered.img}

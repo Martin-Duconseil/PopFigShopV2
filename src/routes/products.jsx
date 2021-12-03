@@ -10,7 +10,7 @@ export default function Products() {
 
     return (
         <div>
-            <h2>Produits</h2>
+            <h2 className="text-center mt-3">Produits</h2>
             <CartProvider>
                 <Search/>
             </CartProvider>
