@@ -28,9 +28,7 @@ export default function Product() {
         }
     }
 
-
-    
-        return (
+    return (
         <div>
             <h3>{pageProduct.title} #{pageProduct.number}</h3>
             <p>Référence Funko : {pageProduct.reference}</p>

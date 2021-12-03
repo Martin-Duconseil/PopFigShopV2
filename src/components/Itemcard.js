@@ -5,7 +5,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from 'react-use-cart';
 
-const Itemcard = ({ title, price, desc, img, item }) => {
+const Itemcard = ({ title, price, desc, img, item, slug }) => {
     const { addItem } = useCart();
 
     return (
@@ -22,7 +22,7 @@ const Itemcard = ({ title, price, desc, img, item }) => {
                             >
                                 Ajouter au panier
                             </button>
-                            <Link to={`/product/${item.slug}`}>
+                            <Link to={`/product/${slug}`}>
                                 <button className="btn btn-success" >Lire la description</button>
                             </Link>
                         </div>
