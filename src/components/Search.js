@@ -37,7 +37,8 @@ const Search = () => {
                         <Itemcard 
                             img={item.img}
                             title={item.title}
-                            price={item.price} 
+                            price={item.price}
+                            slug={item.slug}  
                             item={item}
                             key={index}
                         />
