@@ -22,7 +22,7 @@ const Itemcard = ({ title, price, desc, img, item }) => {
                             >
                                 Ajouter au panier
                             </button>
-                            <Link to={`/product/${item.id}`}>
+                            <Link to={`/product/${item.slug}`}>
                                 <button className="btn btn-success" >Lire la description</button>
                             </Link>
                         </div>
