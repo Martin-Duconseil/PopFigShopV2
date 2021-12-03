@@ -31,35 +31,18 @@ const Search = () => {
                         />
                     </div>
                 </div>
-        
-                {/* {dataSearch.map((item, index) => {
-                    return(
-                        <Itemcard 
-                                img={item.img}
-                                title={item.title}
-                                price={item.price} 
-                                item={item}
-                                key={index}
-                            />
-                    )
-                })} */}
-                
 
                 {dataSearch.map((item, index) => {
                     return(
-                            <Itemcard 
-                                    img={item.img}
-                                    title={item.title}
-                                    price={item.price} 
-                                    item={item}
-                                    key={index}
-                                />
+                        <Itemcard 
+                            img={item.img}
+                            title={item.title}
+                            price={item.price} 
+                            item={item}
+                            key={index}
+                        />
                     )
                 })}
-            
-            
-            
-
             </div>
         </section>
     )
