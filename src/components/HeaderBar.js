@@ -10,7 +10,7 @@ export default class HeaderBar extends React.Component {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
-                    <a className="nav-item nav-link active" href="/home">Accueil</a>
+                    <a className="nav-item nav-link active" href="/">Accueil</a>
                     <a className="nav-item nav-link" href="/products">Produits</a>
                     <a className="nav-item nav-link" href="/cart">Panier</a>
                 </div>

@@ -4,8 +4,17 @@
 //  - Un identifiant unique
 //  - Une image (source en url)
 //  - Un titre
+//  - Un slug (titre pour format url)
 //  - Une description
+//  - Des tags pour préciser la description et pour mieux rechercher
+//  - Une licence de la figurine
+//  - Une année de production
+//  - Si il s'agit d'une altération d'un article sous le même nom que la figurine d'origine
+//  - Un nombre pour retrouver la figurine en fonction de sa licence
+//  - Une version
+//  - Si l'article est exclusif ou non
 //  - Un prix
+//  - Une référence unique
 
 const data = {
 
@@ -15,6 +24,7 @@ const data = {
             id: 1,
             img: "https://www.placedespop.com/img/produits/1404/thumbs/harry-potter-08-harry-potter-quidditch-1-1547215882_0x460.jpg",
             title: "Harry Potter",
+            slug: "harry-potter-quidditch",
             desc: "Harry Potter dans sa tenue pour Quidditch tenant un vif d'or dans la main gauche et son nimbus 2000 dans la main droite. Il arbore une robe de sorcier rouge et or aux couleurs de Gryffondor. Il porte également des chaussures renforcées ainsi que des protèges-poignets assortis. Harry Potter a sa coupe de cheveux des premiers films, ses fameuses lunettes rondes et, bien évidemment, sa fameuse cicatrice en forme d'éclair sur le front.",
             tags: "Film, Sorcier, Fantaisie, Magie, Franchise, Adaptation, Warner Bros",
             licence: "Harry Potter",
@@ -30,6 +40,7 @@ const data = {
             id: 2,
             img: "https://www.placedespop.com/img/produits/2311/thumbs/harry-potter-61-mimi-geignarde-brillant-dans-le-noir-1-1631008522_0x460.jpg",
             title: "Mimi Geignarde",
+            slug: "mimi-geignarde",
             desc: "Le fantôme de Mimi Geignarde transparent et brillant dans le noir. Elle arbore l'uniforme classique de Poudlard, notamment la robe de sorcier avec l'écusson de l'école. Elle porte également des grosses lunnettes rondes, avec ses cheveux coiffés en couettes sur les côtés et quelques mèches sur le frond.",
             tags: "Film, Sorcier, Fantaisie, Magie, Franchise, Adaptation, Warner Bros",
             licence: "Harry Potter",
@@ -45,6 +56,7 @@ const data = {
             id: 3,
             img: "https://www.placedespop.com/img/produits/10376/thumbs/harry-potter-127-patronus-albus-dumbledore-1-1611133933_0x460.jpg",
             title: "Patronus d'Albus Dumbledore",
+            slug: "patronus-albus-dumbledore",
             desc: "Le patronus phénix d'Albus Dumbledore dressé, les ailes déployés. Il est de couleur bleu translucide comme les autres patronus.",
             tags: "Film, Fantaisie, Magie, Animal, Franchise, Adaptation, Warner Bros",
             licence: "Harry Potter",
@@ -60,6 +72,7 @@ const data = {
             id: 4,
             img: "https://www.placedespop.com/img/produits/8471/thumbs/harry-potter-123-hermione-granger-noel-1-1596094736_0x460.jpg",
             title: "Hermione Granger",
+            slug: "hermione-granger-noel",
             desc: "Hermione Granger version fêtes de Noël représenté comme lors du repas chez les Weasley. Elle porte un jean bleu, des baskets marrons, un haut rose à manches longues avec une petite blouse par dessus et une écharpe violette. Hermione a les cheveux bruns, mi-longs légérèement et une frange sur les côtés. Elle tient dans ses 2 mains un paquet cadeau.",
             tags: "Film, Sorcier, Fantaisie, Magie, Franchise, Adaptation, Warner Bros",
             licence: "Harry Potter",
@@ -75,6 +88,7 @@ const data = {
             id: 5,
             img: "https://www.placedespop.com/img/produits/3751/thumbs/le-seigneur-des-anneaux-72-gandalf-sur-gwaihir-1-1575644192_0x460.jpg",
             title: "Gandalf sur Gwaihir",
+            slug: "gandalf-gwaihir",
             desc: "Gandalf chevauchant l'aigle géant Gwaihir représenté lors de son évasion de la tour du Saruman. Gandalf arbore une robe bleu grisé et a des cheveux, barbe gris clair - son visage avec des traces de fatigue. Gwaihir en plein vol, a un beau plumage détaillé marron avec bec et serres (pieds) jaune orangé.",
             tags: "Film, Fantaisie, Franchise, Sorcier, Adaptation, New Line Cinema",
             licence: "Le Seigneur des Anneaux",
@@ -90,6 +104,7 @@ const data = {
             id: 6,
             img: "https://www.placedespop.com/img/produits/2348/thumbs/le-seigneur-des-anneaux-532-gollum-avec-poisson-chase-1-1562846082_0x460.jpg",
             title: "Gollum",
+            slug: "gollum-chase",
             desc: "Gollum à quatre pattes avec un poisson argenté dans la main. Il est représenté avec une peau beige grisé et quelques touches de rose aux extrémités. Il a des dents pontues et quelques cheveux fins sur le crâne et des dents pointues. Il ne porte qu'un pagne déchiré.",
             tags: "Film, Fantaisie, Franchise, Adaptation, New Line Cinema",
             licence: "Le Seigneur des Anneaux",
@@ -105,6 +120,7 @@ const data = {
             id: 7,
             img: "https://www.placedespop.com/img/produits/2346/thumbs/le-seigneur-des-anneaux-448-balrog-brillant-dans-le-noir-super-sized-1-1562845610_0x460.jpg",
             title: "Balrog",
+            slug: "balrog-grande-taille-brillante",
             desc: "Balrog avec son lasseau de feu. Il a des pattes griffues, une longue queue, des grandes ailes noires et des cornes de bouc. Sa peau est craquelée laissant révélant le feu dans son corps.",
             tags: "Film, Fantaisie, Créature, Franchise, Adaptation, New Line Cinema",
             licence: "Le Seigneur des Anneaux",
@@ -120,6 +136,7 @@ const data = {
             id: 8,
             img: "https://www.placedespop.com/img/produits/827/thumbs/le-seigneur-des-anneaux-628-legolas-1-1543923508_0x460.jpg",
             title: "Legolas",
+            slug: "legolas",
             desc: "Legolas avec sa tenue d'elfe de forêt brodé vert et marron prêt à décocher une flèche. Il porte une cape et des broches. Il a les oreilles légèrement pointues et des longs cheveux blonds en arrière tressés.",
             tags: "Film, Fantaisie, Franchise, Adaptation, New Line Cinema",
             licence: "Le Seigneur des Anneaux",
@@ -135,6 +152,7 @@ const data = {
             id: 9,
             img: "https://www.placedespop.com/img/produits/11501/thumbs/naruto-1023-sasuke-uchiha-1-1623672839_0x460.jpg",
             title: "Sasuke (Rinnegan)",
+            slug: "sasuke-rinnegan",
             desc: "Sasuke utilisant la technique du rinnegan. Il arbore sa tenue habituelle : pantalon resserré, sandales, longue tunique violette, ceinture bleue large avec une ceinture de cordes par dessus. Il a des cheveux noirs coiffés en piques.",
             tags: "Anime, Shonen, Ninja, Studio Pierrot",
             licence: "Naruto",
@@ -150,6 +168,7 @@ const data = {
             id: 10,
             img: "https://www.placedespop.com/img/produits/6208/thumbs/naruto-732-naruto-vs-sasuke-1-1617875256_0x460.jpg",
             title: "Naruto Vs. Sasuke",
+            slug: "naruto-vs-sasuke",
             desc: "Combat entre Sasuke et Naruto sur eau et terre. On retrouve les 2 protagonistes presque dans leur tenue habituelle, les vêtements abîmés par le combat et les visages griffés.",
             tags: "Anime, Shonen, Ninja, Studio Pierrot",
             licence: "Naruto",
