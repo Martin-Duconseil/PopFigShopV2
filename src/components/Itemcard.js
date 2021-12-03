@@ -16,15 +16,17 @@ const Itemcard = ({ title, price, desc, img, item, slug }) => {
                             <h5 className="card-title">{title}</h5>
                             <h5 className="card-title">{price} €</h5>
                             <p className="card-text">{desc}</p>
+                            <Link to={`/product/${slug}`}><br/>
+                            <button className="btn btn-seconday" >Lire la description</button>
+                            </Link>
                             <button
-                                className="btn btn-success"
+                                className="btn btn-primary"
                                 onClick={() => addItem(item)}
                             >
                                 Ajouter au panier
-                            </button>
-                            <Link to={`/product/${slug}`}>
-                                <button className="btn btn-success" >Lire la description</button>
-                            </Link>
+                            </button>{' '}
+                            
+                            
                         </div>
                 </div>
             </div>
